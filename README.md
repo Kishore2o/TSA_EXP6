@@ -7,6 +7,7 @@
 
 
 ### AIM: 
+To analyze Netflix stock prices and forecast future prices using Holt-Winters exponential smoothing. The goal is to predict the stock's closing prices for the next 30 business days.
 
 ### ALGORITHM:
 1. You import the necessary libraries
