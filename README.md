@@ -10,17 +10,23 @@
 To analyze Netflix stock prices and forecast future prices using Holt-Winters exponential smoothing. The goal is to predict the stock's closing prices for the next 30 business days.
 
 ### ALGORITHM:
-1. You import the necessary libraries
-2. You load a CSV file containing daily sales data into a DataFrame, parse the 'date' column as
-datetime, and perform some initial data exploration
-3. You group the data by date and resample it to a monthly frequency (beginning of the month
-4. You plot the time series data
-5. You import the necessary 'statsmodels' libraries for time series analysis
-6. You decompose the time series data into its additive components and plot them:
-7. You calculate the root mean squared error (RMSE) to evaluate the model's performance
-8. You calculate the mean and standard deviation of the entire sales dataset, then fit a Holt-
-Winters model to the entire dataset and make future predictions
-9. You plot the original sales data and the predictions
+1. Import necessary libraries like pandas, numpy, matplotlib, and ExponentialSmoothing from statsmodels.
+
+2. Load the dataset and parse the 'Date' column as datetime.
+
+3. Set the 'Date' column as the index of the DataFrame.
+
+4. Convert the 'Close' column to numeric and remove rows with missing values.
+
+5. Extract the 'Close' column for time series analysis.
+
+6. Apply the Holt-Winters exponential smoothing model with additive trend and seasonal components.
+
+7. Fit the model to the cleaned data.
+
+8. Forecast the stock prices for the next 30 business days.
+
+9. Plot both the historical stock data and the forecasted prices.
 ### PROGRAM:
 ```python
 import pandas as pd
